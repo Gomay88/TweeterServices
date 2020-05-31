@@ -8,7 +8,7 @@ public protocol GetTweetsInteractor {
 public class GetTweetsInteractorDefault: GetTweetsInteractor {
     private var twitterRepository: TwitterRepository
     
-    init() {
+    public init() {
         twitterRepository = TwitterRepositoryDefault()
     }
     

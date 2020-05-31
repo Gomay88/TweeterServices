@@ -8,7 +8,7 @@ public protocol RequestTokenInteractor {
 public class RequestTokenInteractorDefault: RequestTokenInteractor {
     private var twitterRepository: TwitterRepository
     
-    init() {
+    public init() {
         twitterRepository = TwitterRepositoryDefault()
     }
     

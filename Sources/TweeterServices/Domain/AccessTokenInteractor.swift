@@ -6,7 +6,7 @@ public protocol AccessTokenInteractor {
 public class AccessTokenInteractorDefault: AccessTokenInteractor {
     private var twitterRepository: TwitterRepository
     
-    init() {
+    public init() {
         twitterRepository = TwitterRepositoryDefault()
     }
     
