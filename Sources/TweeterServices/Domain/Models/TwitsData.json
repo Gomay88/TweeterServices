@@ -1,0 +1,51 @@
+[
+    {
+        "id": 1,
+        "twitText": "One of my first twets!! I know it sounds great",
+        "avatar": "https://i1.wp.com/alesteplaza.es/wp-content/uploads/2017/05/twitter-logo-button.png",
+        "name": "Pepe",
+        "latitude": null,
+        "longitude": null,
+        "followers": 10,
+        "tweets": 25,
+        "favourites": 5,
+        "retweet": 15,
+        "reply": 2
+    }, {
+        "id": 2,
+        "twitText": "I just won 500€ with BetVictor!!",
+        "avatar": "https://is1-ssl.mzstatic.com/image/thumb/Purple113/v4/ac/e5/71/ace57137-4cb9-8541-ef88-315084e79ef9/source/512x512bb.jpg",
+        "name": "Victor",
+        "latitude": 36.148835,
+        "longitude": -5.3538797,
+        "followers": 5,
+        "tweets": 2,
+        "favourites": 1,
+        "retweet": 0,
+        "reply": 0
+    }, {
+        "id": 3,
+        "twitText": "Just suscribe to AppleTV for me and my family!!",
+        "avatar": "https://ghmsolucionesinformaticas.es/wp-content/uploads/2020/03/empresa-1.png",
+        "name": "Jorge",
+        "latitude": null,
+        "longitude": null,
+        "followers": 120,
+        "tweets": 214,
+        "favourites": 100,
+        "retweet": 315,
+        "reply": 178
+    }, {
+        "id": 4,
+        "twitText": "Hi!! Anyone could teach me how to MVVM??",
+        "avatar": "https://miro.medium.com/max/2732/1*n8Jzac0o-EXS_3mVCv-qeg.png",
+        "name": "Paco",
+        "latitude": 40.148835,
+        "longitude": -5.3538797,
+        "followers": 0,
+        "tweets": 0,
+        "favourites": 0,
+        "retweet": 0,
+        "reply": 0
+    }
+]
