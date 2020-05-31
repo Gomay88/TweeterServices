@@ -1,9 +1,9 @@
 
 import Foundation
 
-let twitsData: [Twit] = load("TwitsData.json")
+public let twitsData: [Twit] = load("TwitsData.json")
 
-func load<T: Decodable>(_ filename: String) -> T {
+private func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
     
     guard let file = Bundle.main.url(forResource: filename, withExtension: nil)

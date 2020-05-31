@@ -1,18 +1,18 @@
 
 import Foundation
 
-protocol RequestTokenInteractor {
+public protocol RequestTokenInteractor {
     func execute(completion: @escaping (_ url: String?, _ error: Error?) -> ())
 }
 
-class RequestTokenInteractorDefault: RequestTokenInteractor {
+public class RequestTokenInteractorDefault: RequestTokenInteractor {
     private var twitterRepository: TwitterRepository
     
     init() {
         twitterRepository = TwitterRepositoryDefault()
     }
     
-    func execute(completion: @escaping (_ url: String?, _ error: Error?) -> ()) {
+    public func execute(completion: @escaping (_ url: String?, _ error: Error?) -> ()) {
         twitterRepository.requestToken { (requestOAuthTokenResponse, error) in
             guard let token = requestOAuthTokenResponse?.oauthToken else {
                 completion(nil, error)

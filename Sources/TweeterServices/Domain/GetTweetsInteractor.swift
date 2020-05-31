@@ -1,18 +1,18 @@
 
 import Foundation
 
-protocol GetTweetsInteractor {
+public protocol GetTweetsInteractor {
     func execute(completion: @escaping (_ tweets: [Twit]) -> ())
 }
 
-class GetTweetsInteractorDefault: GetTweetsInteractor {
+public class GetTweetsInteractorDefault: GetTweetsInteractor {
     private var twitterRepository: TwitterRepository
     
     init() {
         twitterRepository = TwitterRepositoryDefault()
     }
     
-    func execute(completion: @escaping (_ tweets: [Twit]) -> ()) {
+    public func execute(completion: @escaping (_ tweets: [Twit]) -> ()) {
         twitterRepository.getTwits(completion: completion)
     }
 }

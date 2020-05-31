@@ -1,7 +1,7 @@
 
 import Foundation
 
-struct Twit: Codable {
+public struct Twit: Codable {
     let id: Int
     let twitText: String
     let avatar: String

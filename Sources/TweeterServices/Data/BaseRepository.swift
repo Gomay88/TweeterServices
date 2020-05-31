@@ -1,11 +1,11 @@
 
 import Foundation
 
-protocol BaseRepository {
+public protocol BaseRepository {
     func execute<T: Decodable>(request: HttpRequest, responseType: T.Type, completion: @escaping ((_ data: T?, _ error: Error?)->()))
 }
 
-extension BaseRepository {
+public extension BaseRepository {
     func execute<T: Decodable>(request: HttpRequest, responseType: T.Type, completion: @escaping ((_ data: T?, _ error: Error?)->())) {
         var urlComponents = URLComponents(string: request.stringURL)
         

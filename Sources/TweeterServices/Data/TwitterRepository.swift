@@ -2,15 +2,15 @@
 import Foundation
 import CommonCrypto
 
-protocol TwitterRepository {
+public protocol TwitterRepository {
     func requestToken(completion: @escaping (RequestOAuthTokenResponse?, Error?) -> ())
     func oauthAuthorize(token: String, completion: @escaping (String?, Error?) -> ())
     func oauthAccessToken(completion: @escaping (String?, Error?) -> ())
     func getTwits(completion: @escaping ([Twit]) -> ())
 }
 
-class TwitterRepositoryDefault: BaseRepository, TwitterRepository {
-    func requestToken(completion: @escaping (RequestOAuthTokenResponse?, Error?) -> ()) {
+public class TwitterRepositoryDefault: BaseRepository, TwitterRepository {
+    public func requestToken(completion: @escaping (RequestOAuthTokenResponse?, Error?) -> ()) {
         Constants.uuid = UUID().uuidString
         
         var headers: [String: String] = [:]
@@ -57,7 +57,7 @@ class TwitterRepositoryDefault: BaseRepository, TwitterRepository {
         }
     }
     
-    func oauthAuthorize(token: String, completion: @escaping (String?, Error?) -> ()) {
+    public func oauthAuthorize(token: String, completion: @escaping (String?, Error?) -> ()) {
         let request = RequestBuilder.twitter()
             .get()
             .parameter(["oauth_token": token])
@@ -67,7 +67,7 @@ class TwitterRepositoryDefault: BaseRepository, TwitterRepository {
         execute(request: request, responseType: String.self, completion: completion)
     }
     
-    func oauthAccessToken(completion: @escaping (String?, Error?) -> ()) {
+    public func oauthAccessToken(completion: @escaping (String?, Error?) -> ()) {
         let request = RequestBuilder.twitter()
             .post()
             .parameter(["oauth_token": Constants.oauthToken, "oauth_verifier": Constants.oauthVerifier])
@@ -86,7 +86,7 @@ class TwitterRepositoryDefault: BaseRepository, TwitterRepository {
         }
     }
     
-    func getTwits(completion: @escaping ([Twit]) -> ()) {
+    public func getTwits(completion: @escaping ([Twit]) -> ()) {
         var headers: [String: String] = [:]
         headers.updateValue(Constants.apiKey, forKey: "oauth_consumer_key")
         headers.updateValue(Constants.uuid, forKey: "oauth_nonce")
