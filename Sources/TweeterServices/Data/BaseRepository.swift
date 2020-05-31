@@ -88,7 +88,7 @@ public extension BaseRepository {
     }
 }
 
-enum RepositoryError: Error {
+public enum RepositoryError: Error {
     case mapError
     case nilDataError
     case serverError
