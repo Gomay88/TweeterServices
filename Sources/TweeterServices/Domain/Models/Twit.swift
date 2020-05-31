@@ -2,19 +2,19 @@
 import Foundation
 
 public struct Twit: Codable {
-    let id: Int
-    let twitText: String
-    let avatar: String
-    let name: String
-    let longitude: Double?
-    let latitude: Double?
-    let followers: Int
-    let tweets: Int
-    let favourites: Int
-    let retweet: Int
-    let reply: Int
+    public let id: Int
+    public let twitText: String
+    public let avatar: String
+    public let name: String
+    public let longitude: Double?
+    public let latitude: Double?
+    public let followers: Int
+    public let tweets: Int
+    public let favourites: Int
+    public let retweet: Int
+    public let reply: Int
     
-    var avatarURLPath: URL? {
+    public var avatarURLPath: URL? {
         guard let url = URL(string: avatar) else {
             return nil
         }
